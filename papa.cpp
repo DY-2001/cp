@@ -64,17 +64,6 @@ template <class T> void _print(set <T> v) {cerr << "[ "; for (T i : v) {_print(i
 template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
 template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
 
-bool balance_str(string expr) {
-    stack<char> temp;
-    for (int i = 0; i < expr.length(); i++) {
-        if (temp.empty()) temp.push(expr[i]);
-        else if ((temp.top() == '(' && expr[i] == ')') || (temp.top() == '{' && expr[i] == '}') || (temp.top() == '[' && expr[i] == ']')) temp.pop();
-        else temp.push(expr[i]);
-    }
-    if (temp.empty()) return true;
-    return false;
-}
-
 void solve() {
 }
 
