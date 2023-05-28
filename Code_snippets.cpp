@@ -37,7 +37,7 @@
 //sort(a.begin(), a.end(), less<ll>());
 //set<ll, compare> s;
 //priortiy_queue<ll, vll, compare> pq; // MIN_HEAP;
-// auto lambda_function_name = []{parameters}-> return_type (function_definition);
+// auto lambda_function_name = [](parameters)-> return_type {function_definition};
 //[&] pass all external variables with reference
 //[=] pass all external variables with value
 //[a, &b] pass variable a with the value(pass by value) and b(pass by reference)
