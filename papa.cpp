@@ -17,7 +17,7 @@ typedef string str;
 #define debug(x)
 #endif
 
-#define make_pair mp;
+// #define make_pair mp;
 #define vll vector<ll>
 #define vb vector<bool>
 #define vvll vector<vll>
@@ -29,9 +29,11 @@ typedef string str;
 #define spll set<pll>
 #define mpll map<ll, pll>
 #define qpll queue<pll>
+#define ln '\n'
 #define fori(i, n) for(ll i = 0; i < n; i++)
 #define forto(i, s, e) for(ll i = s; i <= e; i++)
 #define from(v) ((v).begin(), (v).end())
+#define vii(a, n) vector<ll> a(n); fori(i, n) cin >> a[i];
 #define fast_io ios_base::sync_with_stdio(false);cin.tie(NULL)
 
 using pi = pair<int, int>;
