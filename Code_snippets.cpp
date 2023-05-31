@@ -51,6 +51,23 @@
 
 
 // CODE SNIPPETS
+//Binary Exponentiation using mod operation 
+// ll binaryexpo(ll base, ll x) {
+// 	ll ans = 1;
+// 	while(x) {
+// 		if(x % 2) {
+// 			ans = (ans * base) % mod;
+// 			x = x - 1;
+// 		}
+// 		else {
+// 			base = (base * base) % mod;
+// 			x = x / 2;
+// 		}
+// 	}
+// 	return ans;
+// }
+
+
 // class DisjointSet {
 //     vector<int> rank, parent, size;
 // public:
