@@ -125,7 +125,16 @@
 // }
 
 
-//this is for spf
+//Sieve of Eratosthenes
+// vll is_prime(10000001, 1);
+// for(ll i = 2; i <= 10000000; i++) {
+//     if(is_prime[i] == 1) {
+//         for(ll j = i * i; j <= 10000000; j += i)
+//             is_prime[j] = 0;
+//     }
+// }
+
+//SPF
 // ll maxi = 1e6;
 // vll spf(maxi + 1, 0);
 // for(ll i = 2; i <= maxi; i++) spf[i] = i;
@@ -135,6 +144,26 @@
 // 		if(spf[j] == j) spf[j] = i;
 // 	}
 // }
+
+// bool isPrime(ll n) {
+//     if(n <= 1) return false;
+//     for(ll i = 2; i * i <= n; i++) {
+//         if(n % i == 0) return false;
+//     }
+//     return true;
+// }  
+
+// vll prifac[100001];
+// for(ll i = 1; i <= 100000; i++) {
+//     for(ll j = i; j <= 100000; j += i) {
+//         prifac[j].push_back(i);
+//     }
+// }
+
+
+
+
+
 
 
 //which are the prime factors comes in n
@@ -192,66 +221,10 @@
 //     return 1;
 // }
 
-
-// vll prifac[100001];
-// for(ll i = 1; i <= 100000; i++) {
-//     for(ll j = i; j <= 100000; j += i) {
-//         prifac[j].push_back(i);
-//     }
-// }
-
-//Sieve of Eratosthenes
-// vll is_prime(10000001, 1);
-// for(ll i = 2; i <= 10000000; i++) {
-//     if(is_prime[i] == 1) {
-//         for(ll j = i * i; j <= 10000000; j += i)
-//             is_prime[j] = 0;
-//     }
-// }
-
-// vll primes;
-// for(ll i = 2; i <= 10000000; i++) {
-//     if(is_prime[i] == 1)
-//         primes.push_back(i);
-// }
-
-// lowest prime factors
-// vll low_primes(1e6 + 1);
-// for(ll i = 0; i < 1e6 + 1; i++) {
-//     low_primes[i] = i;
-// }
-
-// for(ll i = 2; i <= 10000000; i++) {
-//     if(low_primes[i] == i) {
-//         for(ll j = i * i; j <= 10000000; j += i) {
-//             if(low_primes[j] == j)
-//                 low_primes[j] = i;
-//         }
-//     }
-// }
-
-// bool isPrime(ll n) {
-//     if(n <= 1)
-//         return false;
-//     for(ll i = 2; i * i <= n; i++) {
-//         if(n % i == 0)
-//             return false;
-//     }
-//     return true;
-// }
-
 // ll get_hash(str s) {
 //     ll h = 0;
 //     for(char c: s) h = (h * 31 + (c - 'a' + 1)) % mod;
 //     return h;
-// }
-
-// ll binary_exponention(ll a, ll b) {
-//     if(b == 0) return 1;
-
-//     ll n = binary_exponention(a, b / 2) % mod;
-//     if(b % 2 != 0) return (((n * n) % mod) * a) % mod;
-//     return (n * n) % mod;
 // }
 
 // ll power(ll x, ll y) {
@@ -265,6 +238,7 @@
 //     }
 //     return res;
 // }
+
 // void primeFactors(ll n, vll &v) {
 //     while (n % 2 == 0) {
 //         v.push_back(2);
