@@ -125,20 +125,15 @@
 // }
 
 
-// ll maxi = 1e6 + 1;
-// vll spf(maxi, 0);
-
-// void sieve() {
-//     spf[1] = 1;
-//     for(ll i = 2 ; i < maxi ; i++) {
-//         if(!spf[i]) {
-//             spf[i] = i;
-//             for(ll j = i * i; j < maxi; j += i) {
-//                 if(!spf[j])
-//                     spf[j] = i;
-//             }
-//         }
-//     }
+//this is for spf
+// ll maxi = 1e6;
+// vll spf(maxi + 1, 0);
+// for(ll i = 2; i <= maxi; i++) spf[i] = i;
+// for(ll i = 2; i * i <= maxi; i++) {
+// 	if(sieve[i] != i) continue;
+// 	for(ll j = i * i; j <= maxi; j += i) {
+// 		if(spf[j] == j) spf[j] = i;
+// 	}
 // }
 
 
