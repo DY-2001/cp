@@ -47,7 +47,14 @@
 // map<pair<int, int>, int> mymap;
 // mymap.insert(make_pair(make_pair(key1,key2), value));
 //access mymap[make_pair(key1, key2)];
-
+// How to print the map of pairs
+// for(auto &it: mp) {
+//     auto key_pair = it.first;
+//     cout << key_pair.first << " " << key_pair.second << " " << it.second << endl;
+// }
+// for(const auto& [key, value]: unordered_map) {
+//   cout << key << " -  " << value << endl; 
+// }
 
 
 // CODE SNIPPETS
@@ -117,12 +124,6 @@
 //         }
 //     }
 // };
-
-// How to print the map of pairs
-// for(auto &it: mp) {
-//     auto key_pair = it.first;
-//     cout << key_pair.first << " " << key_pair.second << " " << it.second << endl;
-// }
 
 
 //Sieve of Eratosthenes
