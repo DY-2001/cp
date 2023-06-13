@@ -294,7 +294,7 @@
 //     return false;
 // }
 
-//Range Minimum Query
+//Range Minimum Query use for min, max, gcd (if there is not update in array) // Time Complexity - O(N(log(N) + Q))
 // int n;
 // cin >> n;
 // bin_log[1] = 0;
@@ -331,3 +331,36 @@
 // 	int k = bin_log[length];
 // 	return min(m[L][k], m[R-(1<<k)+1][k]);
 // }
+
+
+//Range Minimum Query use for min, max, gcd (if there is not update in array)  with space optimization
+// vector<Query> bucket[1 + lgmax];
+// int lg(int number) {
+//   return 31 - __builtin_clz(number);
+// }
+// int rmq[5 + nmax], sol[5 + nmax];
+
+// int n, q;
+//   std::cin >> n >> q;
+//   for(int i = 1; i <= n; i++)
+//     std::cin >> rmq[i];
+//   for(int i = 1;i <= q; i++) {
+//     int x, y;
+//     std::cin >> x >> y;
+//     bucket[lg(y - x + 1)].push_back({x, y, i});
+//   }
+ 
+//   for(int h = 0; h < lgmax; h++) {
+//     for(int i = 0; i < bucket[h].size(); i++) {
+//       int x = bucket[h][i].x;
+//       int y = bucket[h][i].y;
+//       int id = bucket[h][i].id;
+//       sol[id] = std::min(rmq[x], rmq[y - (1 << h) + 1]);
+//     }
+ 
+//     for(int j = 1;j <= n - (1 << (h + 1)) + 1; j++)
+//       rmq[j] = std::min(rmq[j], rmq[j + (1 << h)]);
+//   }
+ 
+//   for(int i = 1;i <= q; i++)
+//     std::cout << sol[i] << '\n';
