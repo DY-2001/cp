@@ -74,6 +74,23 @@
 // 	return ans;
 // }
 
+//Combinatorics
+// ll fact[1e6 + 4];
+// ll modinv[1e6 + 4];
+// void precompfact() {
+// 	modinv[0] = 1;
+// 	fact[0] = 1;
+// 	for(ll i = 1; i <= 1e6; i++) {
+// 		fact[i] = (fact[i - 1] * i) % mod;
+// 		modinv[i] = binaryexpo(fact[i], mod - 2);
+// 	}
+// }
+
+// ll ncr(ll n, ll r) {
+// 	if(n < 0 || r < 0 || r > n) return 0;
+// 	return(((fact[n] * modinv[r]) % mod) * modinv[n - r]) % mod;
+// }
+
 
 // class DisjointSet {
 //     vector<int> rank, parent, size;
@@ -124,6 +141,24 @@
 //         }
 //     }
 // };
+
+// ll get_hash(str s) {
+//     ll h = 0;
+//     for(char c: s) h = (h * 31 + (c - 'a' + 1)) % mod;
+//     return h;
+// }
+
+// ll power(ll x, ll y) {
+//     ll res = 1;
+//     x = x % mod;
+//     while(y > 0) {
+//         if(y & 1)
+//             res = (res * x) % mod;
+//         y = y >> 1;
+//         x = (x * x) % mod;
+//     }
+//     return res;
+// }
 
 
 //Sieve of Eratosthenes
@@ -222,23 +257,8 @@
 //     return 1;
 // }
 
-// ll get_hash(str s) {
-//     ll h = 0;
-//     for(char c: s) h = (h * 31 + (c - 'a' + 1)) % mod;
-//     return h;
-// }
 
-// ll power(ll x, ll y) {
-//     ll res = 1;
-//     x = x % mod;
-//     while(y > 0) {
-//         if(y & 1)
-//             res = (res * x) % mod;
-//         y = y >> 1;
-//         x = (x * x) % mod;
-//     }
-//     return res;
-// }
+
 
 // void primeFactors(ll n, vll &v) {
 //     while (n % 2 == 0) {
@@ -268,19 +288,6 @@
 //             }
 //         }
 //     }
-// }
-
-// ll combine(int n, int r) {
-//     if(r > n - r) r = n - r;
-//     ll ans = 1;
-//     ll i;
-
-//     for(i = 1; i <= r; i++) {
-//         ans *= n - r + i;
-//         ans /= i;
-//     }
-
-//     return ans;
 // }
 
 // bool balance_str(string expr) {
