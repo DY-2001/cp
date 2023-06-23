@@ -418,7 +418,7 @@
 //   for(int i = 1;i <= q; i++)
 //     std::cout << sol[i] << '\n';
 
-//Segment Tree
+//Segment Tree (all associative operations are allowed)
 // class SGTree {
 // 	vector<int> seg;
 // public:
