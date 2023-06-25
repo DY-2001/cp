@@ -263,9 +263,36 @@
 //     return 1;
 // }
 
+//Find all only unique prime factors of n in optimized way 
+//and stored in vector and return it
+// vll wheel(ll n) {
+//     vll factorization;
+//     for (ll d : {2, 3, 5}) {
+//         if(n % d == 0)
+//             factorization.push_back(d);
+//         while(n % d == 0) {
+//             n /= d;
+//         }
+//     }
+//     static array<int, 8> increments = {4, 2, 4, 2, 4, 6, 2, 6};
+//     ll i = 0;
+//     for (ll d = 7; d * d <= n; d += increments[i++]) {
+//         if(n % d == 0)
+//             factorization.push_back(d);
+//         while (n % d == 0) {
+//             n /= d;
+//         }
+//         if (i == 8)
+//             i = 0;
+//     }
+//     if (n > 1)
+//         factorization.push_back(n);
+//     return factorization;
+// }
 
 
-//Print the all only prime factors of n 
+
+//Find the all only prime factors of n 
 //and they will stored in vector v
 // void primeFactors(ll n, vll &v) {
 //     while (n % 2 == 0) {
