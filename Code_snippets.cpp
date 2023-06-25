@@ -243,56 +243,15 @@
 // }
 
 
-
-
-
-
-
-//which are the prime factors comes in n
-// ll primeFactors(ll n, sll &s, ll len) {
-//     if(n % 2 == 0) {
-//         len++;
-//         s.insert(2);
-//         if(len != s.size())
-//             return 0;
-//         while (n % 2 == 0)
-//             n = n / 2;
-//     }
-
-
-//     for (ll i = 3; i <= sqrt(n); i = i + 2) {
-//         if(n % i == 0) {
-//             len++;
-//             s.insert(i);
-//             if(len != s.size())
-//                 return 0;
-//             while (n % i == 0)
-//                 n = n / i;
-//         }
-//     }
-
-//     if (n > 2) {
-//         len++;
-//         s.insert(n);
-//         if(len != s.size())
-//             return 0;
-//     }
-
-//     return 1;
-// }
-
-
-// ll primeFactors(ll n, sll &s, ll len) {
+//Print the all only unique prime factors of n 
+//If you want to store instead of print store in some data Structure
+// ll primeFactors(ll n) { 
 //     ll c = 2;
 //     ll pre = -1;
 //     while(n > 1) {
 //         if(n % c == 0) {
 //             if(pre != c) {
-//                 len++;
-//                 s.insert(c);
-//                 if(len != s.size()) {
-//                     return 0;
-//                 }
+//                 cout << c << endl;
 //             }
 //             n /= c;
 //             pre = c;
@@ -300,12 +259,14 @@
 //         else
 //             c++;
 //     }
+//     cout << endl;
 //     return 1;
 // }
 
 
 
-
+//Print the all only prime factors of n 
+//and they will stored in vector v
 // void primeFactors(ll n, vll &v) {
 //     while (n % 2 == 0) {
 //         v.push_back(2);
@@ -323,9 +284,10 @@
 //         v.push_back(n);
 // }
 
+//Print all divisors of n and store in map
 // void printDivisors(ll n, mll &mp) {
-//     for (int i = 1; i <= sqrt(n); i++) {
-//         if (n % i == 0) {
+//     for(ll i = 1; i <= sqrt(n); i++) {
+//         if(n % i == 0) {
 //             if (n / i == i)
 //                 mp[i]++;
 //             else {
