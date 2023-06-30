@@ -23,8 +23,8 @@
 // #define forii(i, n) for(int i = 0; i < n; i++)
 // #define fordi(i, n) for(int i = n - 1; i >= 0; i--)
 
+// typedef tree<int, null_type,less<int>, rb_tree_tag,tree_order_statistics_node_update> pbds
 // #define ordered_set tree<int, null_type,less<int>, rb_tree_tag,tree_order_statistics_node_update>
-// using namespace __gnu_pbds;
 // template <typename T>
 // using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
@@ -48,7 +48,7 @@
 // mymap.insert(make_pair(make_pair(key1,key2), value));
 //access mymap[make_pair(key1, key2)];
 // How to print the map of pairs
-// for(auto &it: mp) {
+// for(auto &it: mp) { // it always took key as a pair
 //     auto key_pair = it.first;
 //     cout << key_pair.first << " " << key_pair.second << " " << it.second << endl;
 // }
