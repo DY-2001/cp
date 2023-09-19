@@ -84,7 +84,7 @@ int main() {
     ll t;
     cin >> t;
 
-    while (t > 0) {
+    while (t) {
         solve();
         t--;
     }
