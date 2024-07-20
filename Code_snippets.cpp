@@ -449,3 +449,94 @@
 // 		seg[ind] = min(seg[2 * ind + 1], seg[2 * ind + 2]);
 // 	}
 // };
+
+//generic segment Tree
+// template<class T, class U> 
+// struct Lsegtree {
+// 	vector<T> st;
+// 	vector<U> lazy;
+// 	ll n;
+// 	T identity_element;
+// 	U identity_update;
+	//Identity element
+	//in case of no overlap, the value of identity_element
+	//should be such that the answer remains unchanged.
+	//Identity update
+	//such a value, that if we apply this update to a node, 
+	// thenthe value stored in that node does not change
+// 	Lsegtree(ll n, T identity_element, U identity_update) {
+// 		this -> n = n;
+// 		this -> identity_element = identity_element;
+// 		this -> identity_update = identity_update;
+// 		st.assign(4 * n, identity_element);
+// 		lazy.assign(4 * n, identity_update);
+// 	}
+// 	T combine(T l, T r) {
+// 		//first location where we need to change
+// 		T ans = (l + r);
+// 		return ans;
+// 	}
+// 	void buildUtil(ll v, ll tl, ll tr, vector<T> &a) {
+// 		if(tl == tr) {
+// 			st[v] = a[tl];
+// 			return;
+// 		}
+// 		ll tm = (tl + tr) >> 1;
+// 		buildUtil(2 * v + 1, tl, tm, a);
+// 		buildUtil(2 * v + 2, tm + 1, tr, a);
+// 		st[v] = combine(st[2 * v + 1], st[2 * v + 2]);
+// 	}
+//	void build(vector<T> a) {
+		// assert(sz(a) == n);
+		// buildUtil(0, 0, n - 1, a);
+//	}
+// 	T apply(T curr, U upd, ll tl, ll tr) {
+//      second location we need to change
+// 		T ans = (tr - tl + 1) * upd;
+// 		return ans;
+// 	}
+// 	U combineUpdate(U old_upd, U new_upd, ll tl, ll tr) {
+//      third location we need to change
+// 		U ans = old_upd;
+// 		ans = new_upd;
+// 		return ans;
+// 	}
+// 	void push_down(ll v, ll tl, ll tr) {
+// 		if(lazy[v] == identity_update) return;
+// 		st[v] = apply(st[v], lazy[v], tl, tr);
+// 		if(2 * v + 1 <= 4 * n) {
+// 			ll tm = (tl + tr) >> 1;
+// 			lazy[2 * v + 1] = combineUpdate(lazy[2 * v + 1], lazy[v], tl, tm);
+// 			lazy[2 * v + 2] = combineUpdate(lazy[2 * v + 2], lazy[v], tm + 1, tr);
+// 		}
+// 		lazy[v] = identity_update;
+// 	}
+// 	T queryUtil(ll v, ll tl, ll tr, ll l, ll r) {
+// 		push_down(v, tl, tr);
+// 		if(l > r) return identity_element;
+// 		if(tr < l or tl > r) return identity_element;
+// 		if(l <= tl and r >= tr) return st[v];
+// 		ll tm = (tl + tr) >> 1;
+// 		return combine(queryUtil(2 * v + 1, tl , tm, l, r), queryUtil(2 * v + 2, tm + 1, tr, l, r));
+// 	}
+	// T query(ll l, ll r) {
+		// return queryUtil(0, 0, n - 1, l, r);
+	// }
+// 	void updateUtil(ll v, ll tl, ll tr, ll l, ll r, U upd) {
+// 		push_down(v, tl, tr);
+// 		if(tr < l or tl > r) return;
+// 		if(tl >= l and tr <= r) {
+// 			lazy[v] = combineUpdate(lazy[v], upd, tl, tr);
+// 			push_down(v, tl, tr);
+// 		}
+// 		else {
+// 			ll tm = (tl + tr) >> 1;
+// 			updateUtil(2 * v + 1, tl, tm, r, upd);
+// 			updateUtil(2 * v + 2, tm + 1, tr, l, r, upd);
+// 			st[v] = combine(st[2 * v + 1], st[2 * v + 2]);
+// 		}
+// 	}
+	// void update(ll l, ll r, U upd) {
+		// updateUtil(0, 0, n - 1, l, r, upd);
+	// }
+// };
