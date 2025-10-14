@@ -56,6 +56,29 @@
 // }
 // for(const auto& [key, value]: unordered_map) {
 //   cout << key << " -  " << value << endl;
+<<<<<<< Updated upstream
+=======
+// }
+
+// int logi(int a, int b) {
+//     int t = 0;
+//     i64 v = 1;
+//     while (v < b) {
+//         v *= a;
+//         t++;
+//     }
+//     return t;
+// }
+
+// int llog(int a, int b) {
+//     if (a <= b) {
+//         int l = logi(a, b);
+//         return (l == 0 ? 0 : std::__lg(2 * l - 1));
+//     }
+//     int l = logi(b, a + 1) - 1;
+//     assert(l > 0);
+//     return -std::__lg(l);
+>>>>>>> Stashed changes
 // }
 
 // int logi(int a, int b) {
@@ -78,6 +101,11 @@
 //     return -std::__lg(l);
 // }
 
+
+
+
+
+////////////////////////////////////////////////////////////////////
 // CODE SNIPPETS
 // Binary Exponentiation using mod operation
 // ll binaryexpo(ll base, ll x) {
@@ -95,11 +123,14 @@
 // 	return ans;
 // }
 
+<<<<<<< Updated upstream
 //to find only modular inverse value
 // ll inv(int a) {
 //     return a <= 1 ? a : mod - (ll)(mod / a) * inv(mod % a) % mod;
 // }
 
+=======
+>>>>>>> Stashed changes
 // Combinatorics
 // ll fact[1e6 + 4];
 // ll modinv[1e6 + 4];
@@ -116,6 +147,26 @@
 // 	if(n < 0 || r < 0 || r > n) return 0;
 // 	return(((fact[n] * modinv[r]) % mod) * modinv[n - r]) % mod;
 // }
+//////////////////////////////////////////////////////////////////////////
+
+
+<<<<<<< Updated upstream
+// full nCr
+// int  factorialNumInverse[N + 1];
+=======
+>>>>>>> Stashed changes
+
+// // array to precompute inverse of 1! to N!
+// int  naturalNumInverse[N + 1];
+
+<<<<<<< Updated upstream
+=======
+//////////////////////////////////////////////////////////////////////////
+
+//to find only modular inverse value
+// ll inv(int a) {
+//     return a <= 1 ? a : mod - (ll)(mod / a) * inv(mod % a) % mod;
+// }
 
 
 // full nCr
@@ -124,6 +175,7 @@
 // // array to precompute inverse of 1! to N!
 // int  naturalNumInverse[N + 1];
 
+>>>>>>> Stashed changes
 // // array to store factorial of first N numbers
 // int  fact[N + 1];
 
@@ -163,6 +215,54 @@
 //     return ans;
 // }
 
+<<<<<<< Updated upstream
+=======
+
+///////////////////////////////////////////////////////////////////
+
+//DSU jiangly (have more functionalities)
+// struct DSU {
+//     std::vector<int> f, siz;
+
+//     DSU() {}
+//     DSU(int n) {
+//         init(n);
+//     }
+
+//     void init(int n) {
+//         f.resize(n);
+//         std::iota(f.begin(), f.end(), 0);
+//         siz.assign(n, 1);
+//     }
+
+//     int find(int x) {
+//         while (x != f[x]) {
+//             x = f[x] = f[f[x]];
+//         }
+//         return x;
+//     }
+
+//     bool same(int x, int y) {
+//         return find(x) == find(y);
+//     }
+
+//     bool merge(int x, int y) {
+//         x = find(x);
+//         y = find(y);
+//         if (x == y) {
+//             return false;
+//         }
+//         siz[x] += siz[y];
+//         f[y] = x;
+//         return true;
+//     }
+
+//     int size(int x) {
+//         return siz[find(x)];
+//     }
+// };
+
+>>>>>>> Stashed changes
 //Without Rank
 // class DisjointSet {
 // public:
@@ -182,7 +282,11 @@
 //         return parent[node] = findUPar(parent[node]);
 //     }
 
+<<<<<<< Updated upstream
 //     void unionBySize(int u, int v) {
+=======
+//     void unionBySize(int u, int v) { // you can also make this void to bool like in jiangly's dsu
+>>>>>>> Stashed changes
 //         int ulp_u = findUPar(u);
 //         int ulp_v = findUPar(v);
 //         if(ulp_u == ulp_v) return;
@@ -900,4 +1004,8 @@
 // }
 // int inv(int x) {
 //     return x == 1 ? 1 : sub(0, mul(mod / x, inv(mod % x)));
+<<<<<<< Updated upstream
 // }
+=======
+// }
+>>>>>>> Stashed changes
